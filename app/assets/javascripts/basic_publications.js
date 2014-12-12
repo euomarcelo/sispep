@@ -6,7 +6,8 @@ var BasicPublicationForm = {
 	targetForData: "#extra_information",
 	
 	init: function(){		
-		if($(BasicPublicationForm.initialTarget).length > 0){			
+		console.log("initializing bp");	
+		if(true){				
 			var publicationType = $(BasicPublicationForm.initialTarget).val();
 			BasicPublicationForm.currentOption = publicationType;
 			console.log(publicationType);			

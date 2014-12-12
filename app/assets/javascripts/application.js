@@ -19,5 +19,6 @@
 
 
 $(document).ready(function(){
+	console.log("initializing components");
 	BasicPublicationForm.init();
 });
