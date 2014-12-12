@@ -39,10 +39,73 @@
 	  </div>
 	  <div class="field">
 	    <%= f.label :publication_type %><br>
-	    <%= f.text_field :publication_type %>
+	    <%= f.select :publication_type, options_for_select(publication_types_hlp, selected: @basic_publication.publication_type), {include_blank: true}, class: "form-control"  %>
 	  </div>
+	  <div id="extra_information">
+	  	<!-- populated with javascript -->
+	  </div>
+	  	  
 	  <div class="actions">
 	    <%= f.submit %>
 	  </div>
 	<% end %>
+</div>
+
+<div id="form_templates" class="hidden">
+	<%= form_for(@basic_publication) do |f| %>
+	  <div id="form_for_event_publication">
+		  <%= f.fields_for :event_publication, @basic_publication.event_publication || @basic_publication.build_event_publication do |ff| %>
+		      <h4>Dados do evento</h4>
+			  <%= ff.number_field :basic_publication_id, class: "hidden" %>		  
+			  <div class="field">
+			    <%= ff.label :eventName %><br>
+			    <%= ff.text_field :eventName %>
+			  </div>
+			  <div class="field">
+			    <%= ff.label :eventCity %><br>
+			    <%= ff.text_field :eventCity %>
+			  </div>
+			  <div class="field">
+			    <%= ff.label :year %><br>
+			    <%= ff.number_field :year %>
+			  </div>
+			  <div class="field">
+			    <%= ff.label :annalTitle %><br>
+			    <%= ff.text_field :annalTitle %>
+			  </div>
+			  <div class="field">
+			    <%= ff.label :volume %><br>
+			    <%= ff.text_field :volume %>
+			  </div>
+			  <div class="field">
+			    <%= ff.label :issue %><br>
+			    <%= ff.text_field :issue %>
+			  </div>
+			  <div class="field">
+			    <%= ff.label :series %><br>
+			    <%= ff.text_field :series %>
+			  </div>
+			  <div class="field">
+			    <%= ff.label :startingPage %><br>
+			    <%= ff.number_field :startingPage %>
+			  </div>
+			  <div class="field">
+			    <%= ff.label :endingPage %><br>
+			    <%= ff.number_field :endingPage %>
+			  </div>
+			  <div class="field">
+			    <%= ff.label :ISBN %><br>
+			    <%= ff.text_field :ISBN %>
+			  </div>
+			  <div class="field">
+			    <%= ff.label :publisherName %><br>
+			    <%= ff.text_field :publisherName %>
+			  </div>
+			  <div class="field">
+			    <%= ff.label :publisherCity %><br>
+			    <%= ff.text_field :publisherCity %>
+			  </div>
+		  </div>	 
+	  <% end %>  
+	<% end %>	
 </div>

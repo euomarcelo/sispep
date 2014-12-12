@@ -71,6 +71,9 @@ class BasicPublicationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def basic_publication_params
-      params.require(:basic_publication).permit(:profile_id, :title, :year, :country, :language, :webpage, :english_title, :publication_type)
+      params.require(:basic_publication)
+            .permit(:profile_id, :title, :year, :country, :language, 
+                    :webpage, :english_title, :publication_type, 
+                    :event_publication_attributes => [:id, :basic_publication_id, :eventName, :eventCity, :year, :annalTitle, :volume, :issue, :series, :startingPage, :endingPage, :ISBN, :publisherName, :publisherCity])
     end
 end
