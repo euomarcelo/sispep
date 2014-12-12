@@ -1,0 +1,5 @@
+var BasicPublicationForm = {
+	init: function(){
+		
+	}
+};

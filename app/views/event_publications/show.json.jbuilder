@@ -1,0 +1,1 @@
+json.extract! @event_publication, :id, :basic_publication_id, :eventName, :eventCity, :year, :annalTitle, :volume, :issue, :series, :startingPage, :endingPage, :ISBN, :publisherName, :publisherCity, :created_at, :updated_at

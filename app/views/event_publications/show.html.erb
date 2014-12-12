@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Basic publication:</strong>
+  <%= @event_publication.basic_publication_id %>
+</p>
+
+<p>
+  <strong>Eventname:</strong>
+  <%= @event_publication.eventName %>
+</p>
+
+<p>
+  <strong>Eventcity:</strong>
+  <%= @event_publication.eventCity %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @event_publication.year %>
+</p>
+
+<p>
+  <strong>Annaltitle:</strong>
+  <%= @event_publication.annalTitle %>
+</p>
+
+<p>
+  <strong>Volume:</strong>
+  <%= @event_publication.volume %>
+</p>
+
+<p>
+  <strong>Issue:</strong>
+  <%= @event_publication.issue %>
+</p>
+
+<p>
+  <strong>Series:</strong>
+  <%= @event_publication.series %>
+</p>
+
+<p>
+  <strong>Startingpage:</strong>
+  <%= @event_publication.startingPage %>
+</p>
+
+<p>
+  <strong>Endingpage:</strong>
+  <%= @event_publication.endingPage %>
+</p>
+
+<p>
+  <strong>Isbn:</strong>
+  <%= @event_publication.ISBN %>
+</p>
+
+<p>
+  <strong>Publishername:</strong>
+  <%= @event_publication.publisherName %>
+</p>
+
+<p>
+  <strong>Publishercity:</strong>
+  <%= @event_publication.publisherCity %>
+</p>
+
+<%= link_to 'Edit', edit_event_publication_path(@event_publication) %> |
+<%= link_to 'Back', event_publications_path %>

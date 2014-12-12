@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :basic_publications, :path => 'publications'
+  # resources :event_publications
+
+  resources :basic_publications, :path => 'publications' do
+    resources :event_publications, :path => 'events'
+  end
 
   resources :profiles do
     resources :basic_publications, :path => 'publications'

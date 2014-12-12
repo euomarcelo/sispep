@@ -1,46 +1,48 @@
-<%= form_for(@basic_publication) do |f| %>
-  <% if @basic_publication.errors.any? %>
-    <div id="error_explanation">
-      <h2>Os <%= pluralize(@basic_publication.errors.count, "Erro") %> não permitiram que a publicação fosse gravada:</h2>
-
-      <ul>
-      <% @basic_publication.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <%= f.number_field :profile_id, :class => 'hidden', :value => @profile.id %>
-  
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :year %><br>
-    <%= f.number_field :year %>
-  </div>
-  <div class="field">
-    <%= f.label :country %><br>
-    <%= f.text_field :country %>
-  </div>
-  <div class="field">
-    <%= f.label :language %><br>
-    <%= f.text_field :language %>
-  </div>
-  <div class="field">
-    <%= f.label :webpage %><br>
-    <%= f.text_field :webpage %>
-  </div>
-  <div class="field">
-    <%= f.label :english_title %><br>
-    <%= f.text_field :english_title %>
-  </div>
-  <div class="field">
-    <%= f.label :publication_type %><br>
-    <%= f.text_field :publication_type %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+<div id="basic_publication_form">
+	<%= form_for(@basic_publication) do |f| %>
+	  <% if @basic_publication.errors.any? %>
+	    <div id="error_explanation">
+	      <h2>Os <%= pluralize(@basic_publication.errors.count, "Erro") %> não permitiram que a publicação fosse gravada:</h2>
+	
+	      <ul>
+	      <% @basic_publication.errors.full_messages.each do |message| %>
+	        <li><%= message %></li>
+	      <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
+	  <%= f.number_field :profile_id, :class => 'hidden', :value => @profile.id %>
+	  
+	  <div class="field">
+	    <%= f.label :title %><br>
+	    <%= f.text_field :title %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :year %><br>
+	    <%= f.number_field :year %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :country %><br>
+	    <%= f.text_field :country %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :language %><br>
+	    <%= f.text_field :language %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :webpage %><br>
+	    <%= f.text_field :webpage %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :english_title %><br>
+	    <%= f.text_field :english_title %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :publication_type %><br>
+	    <%= f.text_field :publication_type %>
+	  </div>
+	  <div class="actions">
+	    <%= f.submit %>
+	  </div>
+	<% end %>
+</div>

@@ -1,0 +1,49 @@
+<h1>Listing event_publications</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Basic publication</th>
+      <th>Eventname</th>
+      <th>Eventcity</th>
+      <th>Year</th>
+      <th>Annaltitle</th>
+      <th>Volume</th>
+      <th>Issue</th>
+      <th>Series</th>
+      <th>Startingpage</th>
+      <th>Endingpage</th>
+      <th>Isbn</th>
+      <th>Publishername</th>
+      <th>Publishercity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @event_publications.each do |event_publication| %>
+      <tr>
+        <td><%= event_publication.basic_publication_id %></td>
+        <td><%= event_publication.eventName %></td>
+        <td><%= event_publication.eventCity %></td>
+        <td><%= event_publication.year %></td>
+        <td><%= event_publication.annalTitle %></td>
+        <td><%= event_publication.volume %></td>
+        <td><%= event_publication.issue %></td>
+        <td><%= event_publication.series %></td>
+        <td><%= event_publication.startingPage %></td>
+        <td><%= event_publication.endingPage %></td>
+        <td><%= event_publication.ISBN %></td>
+        <td><%= event_publication.publisherName %></td>
+        <td><%= event_publication.publisherCity %></td>
+        <td><%= link_to 'Show', event_publication %></td>
+        <td><%= link_to 'Edit', edit_event_publication_path(event_publication) %></td>
+        <td><%= link_to 'Destroy', event_publication, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Event publication', new_event_publication_path %>

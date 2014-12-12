@@ -137,6 +137,9 @@ pt-BR:
       basic_publication: 
         one: Publicação
         other: Publicações
+      event_publication:
+        one: Evento
+        other: Eventos
   helpers:
     select:
       prompt: Por favor selecione
@@ -165,7 +168,21 @@ pt-BR:
         language: idioma
         webpage: página web
         english_title: título em inglês
-        publication_type: tipo        
+        publication_type: tipo
+      event_publication:
+        basic_publication_id: id da publicação
+        eventName: nome do evento
+        eventCity: cidade do evento
+        year: ano
+        annalTitle: título dos anais
+        volume: volume
+        issue: fascículo
+        series: série
+        startingPage: página inicial
+        endingPage: página final
+        ISBN: ISBN
+        publisherName: nome da editora
+        publisherCity: cidade da editora
   number:
     currency:
       format:

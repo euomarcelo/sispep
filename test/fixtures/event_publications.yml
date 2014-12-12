@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  basic_publication_id: 1
+  eventName: MyString
+  eventCity: MyString
+  year: 1
+  annalTitle: MyString
+  volume: MyString
+  issue: MyString
+  series: MyString
+  startingPage: 1
+  endingPage: 1
+  ISBN: MyString
+  publisherName: MyString
+  publisherCity: MyString
+
+two:
+  basic_publication_id: 1
+  eventName: MyString
+  eventCity: MyString
+  year: 1
+  annalTitle: MyString
+  volume: MyString
+  issue: MyString
+  series: MyString
+  startingPage: 1
+  endingPage: 1
+  ISBN: MyString
+  publisherName: MyString
+  publisherCity: MyString
