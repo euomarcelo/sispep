@@ -74,6 +74,7 @@ class BasicPublicationsController < ApplicationController
       params.require(:basic_publication)
             .permit(:profile_id, :title, :year, :country, :language, 
                     :webpage, :english_title, :publication_type, 
-                    :event_publication_attributes => [:id, :basic_publication_id, :eventName, :eventCity, :year, :annalTitle, :volume, :issue, :series, :startingPage, :endingPage, :ISBN, :publisherName, :publisherCity])
+                    :event_publication_attributes => [:id, :basic_publication_id, :eventName, :eventCity, :year, :annalTitle, :volume, :issue, :series, :startingPage, :endingPage, :ISBN, :publisherName, :publisherCity], 
+                    :scholarly_article_attributes => [:id, :basic_publication_id, :ISSN, :volume, :issue, :series, :startingPage, :endingPage])
     end
 end

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Basic publication:</strong>
+  <%= @scholarly_article.basic_publication %>
+</p>
+
+<p>
+  <strong>Issn:</strong>
+  <%= @scholarly_article.ISSN %>
+</p>
+
+<p>
+  <strong>Volume:</strong>
+  <%= @scholarly_article.volume %>
+</p>
+
+<p>
+  <strong>Issue:</strong>
+  <%= @scholarly_article.issue %>
+</p>
+
+<p>
+  <strong>Series:</strong>
+  <%= @scholarly_article.series %>
+</p>
+
+<p>
+  <strong>Startingpage:</strong>
+  <%= @scholarly_article.startingPage %>
+</p>
+
+<p>
+  <strong>Endingpage:</strong>
+  <%= @scholarly_article.endingPage %>
+</p>
+
+<%= link_to 'Edit', edit_scholarly_article_path(@scholarly_article) %> |
+<%= link_to 'Back', scholarly_articles_path %>

@@ -1,0 +1,37 @@
+<h1>Listing scholarly_articles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Basic publication</th>
+      <th>Issn</th>
+      <th>Volume</th>
+      <th>Issue</th>
+      <th>Series</th>
+      <th>Startingpage</th>
+      <th>Endingpage</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scholarly_articles.each do |scholarly_article| %>
+      <tr>
+        <td><%= scholarly_article.basic_publication %></td>
+        <td><%= scholarly_article.ISSN %></td>
+        <td><%= scholarly_article.volume %></td>
+        <td><%= scholarly_article.issue %></td>
+        <td><%= scholarly_article.series %></td>
+        <td><%= scholarly_article.startingPage %></td>
+        <td><%= scholarly_article.endingPage %></td>
+        <td><%= link_to 'Show', scholarly_article %></td>
+        <td><%= link_to 'Edit', edit_scholarly_article_path(scholarly_article) %></td>
+        <td><%= link_to 'Destroy', scholarly_article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scholarly article', new_scholarly_article_path %>

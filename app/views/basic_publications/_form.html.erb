@@ -53,6 +53,36 @@
 
 <div id="form_templates" class="hidden">
 	<%= form_for(@basic_publication) do |f| %>
+	  <div id="form_for_scholarly_article">
+	  	<h4>Dados do artigo</h4>	  		  	
+	  	<%= f.fields_for :scholarly_article, @basic_publication.scholarly_article || @basic_publication.build_scholarly_article do |ff| %>	
+		  <%= ff.number_field :basic_publication_id, class: "hidden" %>		  
+		  <div class="field">
+		    <%= ff.label :ISSN %><br>
+		    <%= ff.text_field :ISSN %>
+		  </div>
+		  <div class="field">
+		    <%= ff.label :volume %><br>
+		    <%= ff.text_field :volume %>
+		  </div>
+		  <div class="field">
+		    <%= ff.label :issue %><br>
+		    <%= ff.text_field :issue %>
+		  </div>
+		  <div class="field">
+		    <%= ff.label :series %><br>
+		    <%= ff.text_field :series %>
+		  </div>
+		  <div class="field">
+		    <%= ff.label :startingPage %><br>
+		    <%= ff.number_field :startingPage %>
+		  </div>
+		  <div class="field">
+		    <%= ff.label :endingPage %><br>
+		    <%= ff.number_field :endingPage %>
+		  </div>		 
+		  <%end %>
+	  </div>
 	  <div id="form_for_event_publication">
 		  <%= f.fields_for :event_publication, @basic_publication.event_publication || @basic_publication.build_event_publication do |ff| %>
 		      <h4>Dados do evento</h4>

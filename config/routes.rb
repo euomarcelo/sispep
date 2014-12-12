@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
 
+  # resources :scholarly_articles
   # resources :event_publications
 
   resources :basic_publications, :path => 'publications' do
     resources :event_publications, :path => 'events'
+    resources :scholarly_articles, :path => 'articles'
   end
 
   resources :profiles do

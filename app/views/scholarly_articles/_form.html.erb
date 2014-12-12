@@ -1,0 +1,47 @@
+<%= form_for(@scholarly_article.basic_publication) do |f| %>
+  <%= f.fields_for :scholarly_article do |ff| %>
+  <% if @scholarly_article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@scholarly_article.errors.count, "error") %> prohibited this scholarly_article from being saved:</h2>
+
+      <ul>
+      <% @scholarly_article.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= ff.label :basic_publication %><br>
+    <%= ff.number_field :basic_publication %>
+  </div>
+  <div class="field">
+    <%= ff.label :ISSN %><br>
+    <%= ff.text_field :ISSN %>
+  </div>
+  <div class="field">
+    <%= ff.label :volume %><br>
+    <%= ff.text_field :volume %>
+  </div>
+  <div class="field">
+    <%= ff.label :issue %><br>
+    <%= ff.text_field :issue %>
+  </div>
+  <div class="field">
+    <%= ff.label :series %><br>
+    <%= ff.text_field :series %>
+  </div>
+  <div class="field">
+    <%= ff.label :startingPage %><br>
+    <%= ff.number_field :startingPage %>
+  </div>
+  <div class="field">
+    <%= ff.label :endingPage %><br>
+    <%= ff.number_field :endingPage %>
+  </div>
+  <div class="actions">
+    <%= ff.submit %>
+  </div>
+  <%end %>
+<% end %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141212045410) do
+ActiveRecord::Schema.define(version: 20141212084936) do
 
   create_table "basic_publications", force: true do |t|
     t.integer  "profile_id"
@@ -57,6 +57,18 @@ ActiveRecord::Schema.define(version: 20141212045410) do
     t.string   "citation_name"
     t.text     "areas_of_interest"
     t.text     "additional_information"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "scholarly_articles", force: true do |t|
+    t.integer  "basic_publication_id"
+    t.string   "ISSN"
+    t.string   "volume"
+    t.string   "issue"
+    t.string   "series"
+    t.integer  "startingPage"
+    t.integer  "endingPage"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

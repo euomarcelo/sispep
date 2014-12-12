@@ -140,6 +140,9 @@ pt-BR:
       event_publication:
         one: Evento
         other: Eventos
+      scholarly_article:
+        one: Artigo acadêmico
+        other: Artigos acadêmicos
   helpers:
     select:
       prompt: Por favor selecione
@@ -183,6 +186,14 @@ pt-BR:
         ISBN: ISBN
         publisherName: nome da editora
         publisherCity: cidade da editora
+      scholarly_article:
+        basic_publication_id: id da publicação 
+        ISSN: ISSN
+        volume: volume
+        issue: fascículo
+        series: série
+        startingPage: página inicial
+        endingPage: página final
   number:
     currency:
       format:

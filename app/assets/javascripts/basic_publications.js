@@ -30,12 +30,19 @@ var BasicPublicationForm = {
 			$(BasicPublicationForm.targetForData).
 				children().appendTo("#form_for_event_publication");	
 		}
+		else if(previousPublicationType == 'artigo'){
+			$(BasicPublicationForm.targetForData).
+				children().appendTo("#form_for_scholarly_article");	
+		}		
 		
 	},
 	populate: function(publicationType){
 		console.log("povoando " + publicationType );		
 		if(publicationType == 'evento'){
 			$("#form_for_event_publication").children().appendTo(BasicPublicationForm.targetForData);			
+		}
+		else if(publicationType == 'artigo'){
+			$("#form_for_scholarly_article").children().appendTo(BasicPublicationForm.targetForData);			
 		}
 	}
 };

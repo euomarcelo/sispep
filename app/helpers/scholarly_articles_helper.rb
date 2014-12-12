@@ -1,0 +1,2 @@
+module ScholarlyArticlesHelper
+end
