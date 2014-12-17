@@ -15,6 +15,8 @@
 // Font Awesome
 @import "fontawesome/font-awesome";
 
+@import "colors";
+
 // Glyphicons
 //@import "twitter/bootstrap/sprites.less";
 
@@ -28,6 +30,27 @@
 //
 // Example:
 // @linkColor: #ff0000;
+
+/*** HEADER ******************************************************************/
+header, footer {  
+  color: @white; 
+  background-color: @primary1;
+  #gradient > .vertical(@primary2, lighten(@primary2, 15%)); 
+  padding: 20px;
+  a {
+    color: @white;    
+    &:link {color: @white !important;}      /* unvisited link */
+    &:visited {color: @white !important;}  /* visited link */  
+    &:hover {color:darken(@white, 15%) !important;}  /* mouse over link */
+    &:active {color:darken(@white, 15%) !important;}  /* selected link */
+  } 
+}
+
+/***CONTENT ******************************************************************/
+
+#page_content {
+  min-height: 800px;
+}
 
 /*** ALL- PURPOSE ************************************************************/
 thead tr th.table-actions {

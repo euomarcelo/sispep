@@ -5,7 +5,9 @@ gem 'rails', '4.1.7'
 
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
-gem 'mysql2'
+gem 'mysql2', group: :development
+gem 'pg', group: :production
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -37,6 +39,10 @@ gem 'devise'
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
+
+gem 'rails_12factor', group: :production # for heroku deploy
+
+ruby "2.1.4"
 
 # Use unicorn as the app server
 # gem 'unicorn'
