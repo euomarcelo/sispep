@@ -8,7 +8,7 @@ class CreateBasicPublications < ActiveRecord::Migration
       t.string :language
       t.string :webpage
       t.string :english_title
-      t.string :publication_type
+      t.integer :publication_type
 
       t.timestamps
     end
